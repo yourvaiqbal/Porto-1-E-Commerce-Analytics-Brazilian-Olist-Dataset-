@@ -140,7 +140,36 @@ erDiagram
 
 ## 🔁 Data Pipeline Flowchart
 
-![Pipeline](diagrams/pipeline_flowchart.png)
+```mermaid
+flowchart TD
+
+    %% RAW DATA
+    A[Raw Data<br/>p1_ecommerce] --> B[Data Cleaning<br/>data_cleaning.sql]
+
+    %% CLEAN TABLES
+    B --> C[Clean Tables<br/>p1_ecommerce_clean<br/>customers, orders, order_items, payments, products, sellers]
+
+    %% TRANSFORMATION
+    C --> D[Data Transformation<br/>data_transformation.sql]
+
+    %% SUMMARY TABLES
+    D --> D1[order_summary]
+    D --> D2[customer_summary]
+    D --> D3[seller_summary]
+    D --> D4[product_summary]
+    D --> D5[daily_metrics]
+    D --> D6[monthly_metrics]
+
+    %% EDA
+    D --> E[Exploratory Analysis<br/>exploratory_queries.sql]
+
+    %% BUSINESS METRICS
+    E --> F[Business Metrics<br/>business_metrics.sql]
+
+    %% DASHBOARD
+    F --> G[Dashboard<br/>Looker Studio / Tableau / Power BI]
+```
+
 
 ---
 
