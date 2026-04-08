@@ -108,6 +108,34 @@ product_summary (PK: product_id)
 daily_metrics (PK: order_date)
 monthly_metrics (PK: year_month)
 
+RAW DATA (p1_ecommerce)
+        │
+        ▼
+DATA CLEANING (data_cleaning.sql)
+        │
+        ▼
+CLEAN TABLES (p1_ecommerce_clean)
+customers, orders, order_items, payments, products, sellers
+        │
+        ▼
+DATA TRANSFORMATION (data_transformation.sql)
+        │
+        ├── order_summary
+        ├── customer_summary
+        ├── seller_summary
+        ├── product_summary
+        ├── daily_metrics
+        └── monthly_metrics
+        │
+        ▼
+EXPLORATORY ANALYSIS (exploratory_queries.sql)
+        │
+        ▼
+BUSINESS METRICS (business_metrics.sql)
+        │
+        ▼
+DASHBOARD (Looker Studio / Tableau / Power BI)
+
 
 ## 🧬 Entity Relationship Diagram (ERD)
 
