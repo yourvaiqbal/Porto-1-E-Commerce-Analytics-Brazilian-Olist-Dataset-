@@ -85,8 +85,6 @@ Key KPIs:
 
 ## 🧬 Entity Relationship Diagram (ERD)
 
-![ERD](diagrams/erd.png)
-
 ```mermaid
 erDiagram
 
