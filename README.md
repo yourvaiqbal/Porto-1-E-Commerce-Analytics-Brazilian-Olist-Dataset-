@@ -83,6 +83,32 @@ Key KPIs:
 
 ---
 
+customers (PK: customer_id)
+    └──< orders.customer_id
+
+orders (PK: order_id)
+    ├──< order_items.order_id
+    ├──< payments.order_id
+    └──< order_summary.order_id
+
+order_items (PK: order_id + order_item_id)
+    ├──> products.product_id
+    └──> sellers.seller_id
+
+products (PK: product_id)
+    └──< product_summary.product_id
+
+sellers (PK: seller_id)
+    └──< seller_summary.seller_id
+
+order_summary (PK: order_id)
+customer_summary (PK: customer_id)
+seller_summary (PK: seller_id)
+product_summary (PK: product_id)
+daily_metrics (PK: order_date)
+monthly_metrics (PK: year_month)
+
+
 ## 🧬 Entity Relationship Diagram (ERD)
 
 ![ERD](diagrams/erd.png)
@@ -108,6 +134,8 @@ Key KPIs:
 Aspiring Data Analyst | SQL • Dashboarding • Data Modeling
 
 ---
+
+
 
 ## 📄 License
 This project is open‑source under the MIT License.
