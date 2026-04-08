@@ -87,6 +87,57 @@ Key KPIs:
 
 ![ERD](diagrams/erd.png)
 
+```mermaid
+erDiagram
+
+    customers {
+        string customer_id PK
+        string customer_unique_id
+        string customer_city
+        string customer_state
+    }
+
+    orders {
+        string order_id PK
+        string customer_id FK
+        date order_purchase_date
+        string order_status
+    }
+
+    order_items {
+        string order_id FK
+        int order_item_id PK
+        string product_id FK
+        string seller_id FK
+        decimal price
+        decimal freight_value
+    }
+
+    payments {
+        string order_id FK
+        string payment_type
+        decimal payment_value
+    }
+
+    products {
+        string product_id PK
+        string product_category_name
+    }
+
+    sellers {
+        string seller_id PK
+        string seller_city
+        string seller_state
+    }
+
+    customers ||--o{ orders : places
+    orders ||--o{ order_items : contains
+    orders ||--o{ payments : paid_by
+    order_items }o--|| products : includes
+    order_items }o--|| sellers : sold_by
+```
+
+
 ---
 
 ## 🔁 Data Pipeline Flowchart
