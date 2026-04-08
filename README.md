@@ -1,4 +1,4 @@
-# Porto-1-E-Commerce-Analytics-Brazilian-Olist-Dataset-
+ecommerce-analytics-olist-brazil
 E-Commerce
 # E‑Commerce Analytics (Brazilian Olist Dataset)
 A complete end‑to‑end data analytics project built using MySQL, covering data cleaning, transformation, exploratory analysis, and business metrics generation. This project is designed to demonstrate analytical thinking, SQL engineering skills, and dashboard‑ready data modeling.
