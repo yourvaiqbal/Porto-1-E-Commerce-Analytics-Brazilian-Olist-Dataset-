@@ -225,8 +225,3 @@ If you build a dashboard, add the link here:
 ## 👤 Author
 **Ahmad Iqbal Maulana**  
 Aspiring Data Analyst | SQL • Dashboarding • Data Modeling  
-
----
-
-## 📄 License
-This project is open‑source under the MIT License.
